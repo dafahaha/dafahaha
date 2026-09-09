@@ -1,8 +1,6 @@
-### Hi, I'm Daizhi Liao (廖代志) 👋
+### Hey, I'm dafahaha 👋
 
-I'm a third-year undergraduate at **Guangzhou University**, majoring in Network Engineering with a focus on AI systems. My research sits at the intersection of **reinforcement learning**, **embodied AI**, and **efficient model deployment** — closing the gap between RL research and real-world robot and edge hardware.
-
-I'm applying for **PhD programs (Fall 2027)** in Embodied AI / Reinforcement Learning / Robotics.
+Open-source tinkerer working at the intersection of **reinforcement learning**, **embodied AI**, and **efficient model deployment** — closing the gap between RL research and real-world edge hardware.
 
 ---
 
@@ -41,10 +39,9 @@ Export Stable-Baselines3 policies to ONNX/TorchScript, build TensorRT engines wi
 
 ## 📫 Contact
 
-- 📧 Email: `daizhi.liao [at] example.com`
-- 🏫 Guangzhou University, Guangzhou, China
-- 🎓 Open to PhD opportunities in Embodied AI / RL / Robotics
+- 📧 Email: [ldz@e.gzhu.edu.cn](mailto:ldz@e.gzhu.edu.cn)
+- 🌐 [rl-deploy-bench](https://github.com/dafahaha/rl-deploy-bench)
 
 ---
 
-![Daizhi's GitHub stats](https://github-readme-stats.vercel.app/api?username=dafahaha&show_icons=true&hide_border=true&count_private=true)
+![dafahaha's GitHub stats](https://github-readme-stats.vercel.app/api?username=dafahaha&show_icons=true&hide_border=true&count_private=true)
