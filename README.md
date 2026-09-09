@@ -1,18 +1,26 @@
-### Hey, I'm dafahaha 👋
+### Hi, I'm Daizhi Liao (廖代志) 👋
 
-Open-source tinkerer working at the intersection of **reinforcement learning**, **embodied AI**, and **efficient model deployment** — closing the gap between RL research and real-world edge hardware.
+I'm a third-year undergraduate at **Guangzhou University**, majoring in Network Engineering with a focus on AI systems. My research sits at the intersection of **reinforcement learning**, **embodied AI**, and **efficient model deployment** — closing the gap between RL research and real-world robot and edge hardware.
+
+I'm applying for **PhD programs (Fall 2027)** in Embodied AI / Reinforcement Learning / Robotics.
+
+🔗 **[Academic Homepage](https://dafahaha.github.io)** &nbsp;|&nbsp; 📄 **[CV](https://dafahaha.github.io/CV.pdf)** &nbsp;|&nbsp; 📧 [ldz@e.gzhu.edu.cn](mailto:ldz@e.gzhu.edu.cn)
 
 ---
 
-## 🔬 Featured Project
+## 🔬 Research
 
-### [rl-deploy-bench](https://github.com/dafahaha/rl-deploy-bench)
-**Cross-platform RL model deployment and performance benchmarking toolkit**
+**Research Interests:**
+- Reinforcement learning for embodied agents (off-policy algorithms, sample efficiency)
+- Cross-platform RL model deployment (GPU / Jetson / CPU)
+- Model compression and quantization for RL policies (INT8 / FP16)
+- AI safety and adversarial robustness
 
-Export Stable-Baselines3 policies to ONNX/TorchScript, build TensorRT engines with FP16/INT8 quantization, and benchmark latency, throughput, and accuracy across **x86 GPU, NVIDIA Jetson, and CPU** — all from one config-driven CLI with auto-generated HTML reports.
+**Featured Project — [rl-deploy-bench](https://github.com/dafahaha/rl-deploy-bench)**
 
-- **Stack**: Python · PyTorch · ONNX Runtime · TensorRT · Stable-Baselines3 · Plotly
-- **Status**: v1.1 released, actively maintained
+A cross-platform RL model deployment and performance benchmarking toolkit. Export Stable-Baselines3 policies to ONNX/TorchScript, build TensorRT engines with FP16/INT8 quantization, and benchmark latency, throughput, and accuracy across x86 GPU, NVIDIA Jetson, and CPU — all from one config-driven CLI with auto-generated HTML reports.
+
+*Research value:* Provides a reproducible benchmark for studying the accuracy-latency tradeoff of RL policy quantization across hardware platforms.
 
 ---
 
@@ -33,15 +41,7 @@ Export Stable-Baselines3 policies to ONNX/TorchScript, build TensorRT engines wi
 **Deployment** — ONNX · ONNX Runtime · TensorRT · TorchScript · INT8/FP16 quantization
 **Edge and Robotics** — NVIDIA Jetson (Xavier/Orin) · ROS · CUDA · cuDNN
 **Systems** — Python · C++ · Linux · Docker · Git · CI/CD
-**Security** — AI safety · adversarial robustness · multimedia security
 
 ---
 
-## 📫 Contact
-
-- 📧 Email: [ldz@e.gzhu.edu.cn](mailto:ldz@e.gzhu.edu.cn)
-- 🌐 [rl-deploy-bench](https://github.com/dafahaha/rl-deploy-bench)
-
----
-
-![dafahaha's GitHub stats](https://github-readme-stats.vercel.app/api?username=dafahaha&show_icons=true&hide_border=true&count_private=true)
+![Daizhi's GitHub stats](https://github-readme-stats.vercel.app/api?username=dafahaha&show_icons=true&hide_border=true&count_private=true)
