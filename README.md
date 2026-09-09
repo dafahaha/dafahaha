@@ -1,4 +1,4 @@
-### Hi, I'm Daizhi Liao (廖代志) 👋
+### Hi, I'm Daizhi Liao 👋
 
 I'm a third-year undergraduate at **Guangzhou University**, majoring in Network Engineering with a focus on AI systems. My research sits at the intersection of **reinforcement learning**, **embodied AI**, and **efficient model deployment** — closing the gap between RL research and real-world robot and edge hardware.
 
