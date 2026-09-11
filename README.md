@@ -29,7 +29,7 @@ A cross-platform RL model deployment and performance benchmarking toolkit. Expor
 | Project | PR | Contribution | Status |
 |---------|-----|-------------|--------|
 | [UoA-CARES/cares_reinforcement_learning](https://github.com/UoA-CARES/cares_reinforcement_learning/pull/409) | #409 | Algorithm docs (DQN, PPO, overview) rewritten against actual codebase API; 44-algorithm index | Under review |
-| [RLinf/RLinf](https://github.com/RLinf/RLinf/pull/1528) | #1528 | New robot arm integration guide (bilingual EN/ZH) | Open |
+| [RLinf/RLinf](https://github.com/RLinf/RLinf/pull/1528) | #1528 | New robot arm integration guide (bilingual EN/ZH) | Closed |
 | [redai-studio/Relax](https://github.com/redai-studio/Relax/pull/294) | #294 | Docker-free installation guide (bilingual EN/ZH) | Open |
 | [OWASP/secure-agent-playbook](https://github.com/OWASP/secure-agent-playbook/pull/28) | #28 | Fixed outdated OWASP LLM Top 10 IDs across 5 files | Open |
 
