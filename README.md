@@ -28,10 +28,13 @@ A cross-platform RL model deployment and performance benchmarking toolkit. Expor
 
 | Project | PR | Contribution | Status |
 |---------|-----|-------------|--------|
+| [scikit-learn/scikit-learn](https://github.com/scikit-learn/scikit-learn/pull/34981) | #34981 | Fixed `compute_class_weight` coercing string labels (e.g. `"1"`) to int, breaking dict lookup for string class weights | Open |
+| [vllm-project/vllm](https://github.com/vllm-project/vllm/pull/57400) | #57400 | Fixed `system_fingerprint: null` emitted in non-streaming responses when `--fingerprint-mode=none`; added `exclude_none=True` to model_dump | Open |
+| [Farama-Foundation/Gymnasium](https://github.com/Farama-Foundation/Gymnasium/pull/1719) | #1719 | Fixed `mj_forward` not called after `mj_step`, causing inconsistent body xpos/qpos in observations (e.g. Reacher-v5) | Open |
+| [huggingface/trl](https://github.com/huggingface/trl/pull/7264) | #7264 | Fixed `entropy_from_logits` returning NaN for zero-probability tokens (`0 * -inf = NaN`); replaced -inf logps with 0 before multiplication | Open |
 | [UoA-CARES/cares_reinforcement_learning](https://github.com/UoA-CARES/cares_reinforcement_learning/pull/409) | #409 | Algorithm docs (DQN, PPO, overview) rewritten against actual codebase API; 44-algorithm index | Under review |
-| [RLinf/RLinf](https://github.com/RLinf/RLinf/pull/1528) | #1528 | New robot arm integration guide (bilingual EN/ZH) | Closed |
-| [redai-studio/Relax](https://github.com/redai-studio/Relax/pull/294) | #294 | Docker-free installation guide (bilingual EN/ZH) | Open |
 | [OWASP/secure-agent-playbook](https://github.com/OWASP/secure-agent-playbook/pull/28) | #28 | Fixed outdated OWASP LLM Top 10 IDs across 5 files | Open |
+| [redai-studio/Relax](https://github.com/redai-studio/Relax/pull/294) | #294 | Docker-free installation guide (bilingual EN/ZH) | Open |
 
 ---
 
