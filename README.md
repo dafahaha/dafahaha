@@ -1,16 +1,16 @@
-### Hi, I'm Daizhi Liao 👋
+### Hi, I'm Daizhi Liao
 
-I'm a third-year undergraduate at **Guangzhou University**, majoring in Network Engineering with a focus on AI systems. My research sits at the intersection of **reinforcement learning**, **embodied AI**, and **efficient model deployment** — closing the gap between RL research and real-world robot and edge hardware.
+Third-year undergraduate at Guangzhou University, Network Engineering. Research focus: reinforcement learning, embodied AI, and efficient model deployment — bridging RL research and real-world edge hardware.
 
-I'm applying for **PhD programs (Fall 2027)** in Embodied AI / Reinforcement Learning / Robotics.
+Applying for PhD programs (Fall 2027) in Embodied AI / Reinforcement Learning / Robotics.
 
-🔗 **[Academic Homepage](https://dafahaha.github.io)** &nbsp;|&nbsp; 📄 **[CV](https://dafahaha.github.io/CV.pdf)** &nbsp;|&nbsp; 📧 [ldz@e.gzhu.edu.cn](mailto:ldz@e.gzhu.edu.cn)
+[Academic Homepage](https://dafahaha.github.io) | [CV](https://dafahaha.github.io/CV.pdf) | [ldz@e.gzhu.edu.cn](mailto:ldz@e.gzhu.edu.cn)
 
 ---
 
-## 🔬 Research
+## Research
 
-**Research Interests:**
+**Interests:**
 - Reinforcement learning for embodied agents (off-policy algorithms, sample efficiency)
 - Cross-platform RL model deployment (GPU / Jetson / CPU)
 - Model compression and quantization for RL policies (INT8 / FP16)
@@ -18,31 +18,46 @@ I'm applying for **PhD programs (Fall 2027)** in Embodied AI / Reinforcement Lea
 
 **Featured Project — [rl-deploy-bench](https://github.com/dafahaha/rl-deploy-bench)**
 
-A cross-platform RL model deployment and performance benchmarking toolkit. Export Stable-Baselines3 policies to ONNX/TorchScript, build TensorRT engines with FP16/INT8 quantization, and benchmark latency, throughput, and accuracy across x86 GPU, NVIDIA Jetson, and CPU — all from one config-driven CLI with auto-generated HTML reports.
-
-*Research value:* Provides a reproducible benchmark for studying the accuracy-latency tradeoff of RL policy quantization across hardware platforms.
+Cross-platform RL model deployment and benchmarking toolkit. Export SB3 policies to ONNX/TorchScript, build TensorRT engines with FP16/INT8 quantization, and benchmark latency/throughput/accuracy across x86 GPU, Jetson, and CPU — from one config-driven CLI with auto-generated HTML reports.
 
 ---
 
-## 🤝 Open Source Contributions
+## Open Source Contributions
 
-| Project | PR | Contribution | Status |
-|---------|-----|-------------|--------|
-| [scikit-learn/scikit-learn](https://github.com/scikit-learn/scikit-learn/pull/34981) | #34981 | Fixed `compute_class_weight` coercing string labels (e.g. `"1"`) to int, breaking dict lookup for string class weights | Open |
-| [vllm-project/vllm](https://github.com/vllm-project/vllm/pull/57400) | #57400 | Fixed `system_fingerprint: null` emitted in non-streaming responses when `--fingerprint-mode=none`; added `exclude_none=True` to model_dump | Open |
-| [Farama-Foundation/Gymnasium](https://github.com/Farama-Foundation/Gymnasium/pull/1719) | #1719 | Fixed `mj_forward` not called after `mj_step`, causing inconsistent body xpos/qpos in observations (e.g. Reacher-v5) | Open |
-| [huggingface/trl](https://github.com/huggingface/trl/pull/7264) | #7264 | Fixed `entropy_from_logits` returning NaN for zero-probability tokens (`0 * -inf = NaN`); replaced -inf logps with 0 before multiplication | Open |
-| [UoA-CARES/cares_reinforcement_learning](https://github.com/UoA-CARES/cares_reinforcement_learning/pull/409) | #409 | Algorithm docs (DQN, PPO, overview) rewritten against actual codebase API; 44-algorithm index | Under review |
-| [OWASP/secure-agent-playbook](https://github.com/OWASP/secure-agent-playbook/pull/28) | #28 | Fixed outdated OWASP LLM Top 10 IDs across 5 files | Open |
-| [redai-studio/Relax](https://github.com/redai-studio/Relax/pull/294) | #294 | Docker-free installation guide (bilingual EN/ZH) | Open |
+**Merged**
+
+| Project | PR | Contribution |
+|---------|-----|-------------|
+| [shmuma/ptan](https://github.com/shmuma/ptan/pull/57) | #57 | Fixed Gymnasium API compatibility in experience sources |
+| [Algorineko/AgenticArXiv-RL](https://github.com/Algorineko/AgenticArXiv-RL/pull/72) | #72 | Added MIT License, CONTRIBUTING, issue templates, CI |
+| [NVlabs/FluxVLA](https://github.com/NVlabs/FluxVLA/pull/122) | #122, #123 | Fixed typos and installation docs |
+
+**In Review — Code Bug Fixes**
+
+| Project | PR | Contribution |
+|---------|-----|-------------|
+| [scikit-learn/scikit-learn](https://github.com/scikit-learn/scikit-learn/pull/34986) | #34986 | Removed `int(c)` coercion in `compute_class_weight` that broke dict lookup for string labels parsing as int (Fixes #34883) |
+| [vllm-project/vllm](https://github.com/vllm-project/vllm/pull/57400) | #57400 | Fixed `system_fingerprint: null` in non-streaming responses when `--fingerprint-mode=none` |
+| [DLR-RM/stable-baselines3](https://github.com/DLR-RM/stable-baselines3/pull/2289) | #2289 | Fixed `DummyVecEnv`/`SubprocVecEnv` ignoring reset options/seeds on auto-reset |
+| [microsoft/TextWorld](https://github.com/microsoft/TextWorld/pull/377) | #377 | Fixed `env.step` crash on multi-command input causing `int()` parse failure |
+| [google/brax](https://github.com/google/brax/pull/676) | #676 | Fixed EpisodeWrapper metrics accumulation with action_repeat |
+| [huggingface/datasets](https://github.com/huggingface/datasets/pull/8633) | #8633 | Fixed `pathlib.Path` regression in dataset loading |
+| [huggingface/diffusers](https://github.com/huggingface/diffusers/pull/14796) | #14796 | Code improvement |
+
+**In Review — Docs / Other**
+
+| Project | PR | Contribution |
+|---------|-----|-------------|
+| [UoA-CARES/cares_reinforcement_learning](https://github.com/UoA-CARES/cares_reinforcement_learning/pull/409) | #409 | Algorithm docs rewritten against actual codebase API |
+| [OWASP/secure-agent-playbook](https://github.com/OWASP/secure-agent-playbook/pull/28) | #28 | Fixed outdated OWASP LLM Top 10 IDs |
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
-**RL and Learning** — PyTorch · Stable-Baselines3 · Gymnasium · MuJoCo
-**Deployment** — ONNX · ONNX Runtime · TensorRT · TorchScript · INT8/FP16 quantization
-**Edge and Robotics** — NVIDIA Jetson (Xavier/Orin) · ROS · CUDA · cuDNN
+**RL** — PyTorch · Stable-Baselines3 · Gymnasium · MuJoCo
+**Deployment** — ONNX · ONNX Runtime · TensorRT · TorchScript · INT8/FP16
+**Edge/Robotics** — NVIDIA Jetson · ROS · CUDA · cuDNN
 **Systems** — Python · C++ · Linux · Docker · Git · CI/CD
 
 ---
