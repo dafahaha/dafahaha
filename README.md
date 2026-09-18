@@ -37,7 +37,6 @@ Cross-platform RL model deployment and benchmarking toolkit. Export SB3 policies
 | Project | PR | Contribution |
 |---------|-----|-------------|
 | [scikit-learn/scikit-learn](https://github.com/scikit-learn/scikit-learn/pull/34986) | #34986 | Removed `int(c)` coercion in `compute_class_weight` that broke dict lookup for string labels parsing as int (Fixes #34883) |
-| [vllm-project/vllm](https://github.com/vllm-project/vllm/pull/57400) | #57400 | Fixed `system_fingerprint: null` in non-streaming responses when `--fingerprint-mode=none` |
 | [DLR-RM/stable-baselines3](https://github.com/DLR-RM/stable-baselines3/pull/2289) | #2289 | Fixed `DummyVecEnv`/`SubprocVecEnv` ignoring reset options/seeds on auto-reset |
 | [microsoft/TextWorld](https://github.com/microsoft/TextWorld/pull/377) | #377 | Fixed `env.step` crash on multi-command input causing `int()` parse failure |
 | [google/brax](https://github.com/google/brax/pull/676) | #676 | Fixed EpisodeWrapper metrics accumulation with action_repeat |
