@@ -4,7 +4,7 @@ Third-year undergraduate at Guangzhou University, Network Engineering. Research 
 
 Applying for PhD programs (Fall 2027) in Embodied AI / Reinforcement Learning / Robotics.
 
-[Academic Homepage](https://dafahaha.github.io) | [CV](https://dafahaha.github.io/CV.pdf) | [ldz@e.gzhu.edu.cn](mailto:ldz@e.gzhu.edu.cn)
+[Academic Homepage](https://dafahaha.github.io) | [Blog](https://dafahaha.github.io/blog/) | [CV](https://dafahaha.github.io/CV.pdf) | [ldz@e.gzhu.edu.cn](mailto:ldz@e.gzhu.edu.cn)
 
 ---
 
@@ -51,6 +51,12 @@ Applying for PhD programs (Fall 2027) in Embodied AI / Reinforcement Learning / 
 | [MichalBortkiewicz/JaxGCRL](https://github.com/MichalBortkiewicz/JaxGCRL/pull/65) | #65 | Fixed XML path resolution in arm manipulation envs |
 
 Plus documentation work in [UoA-CARES/cares_reinforcement_learning](https://github.com/UoA-CARES/cares_reinforcement_learning/pull/409) #409 and community/CI setup across several smaller RL projects.
+
+---
+
+## Writing
+
+- [Fixing a bug in Microsoft TextWorld — one line of regex and the multi-command parsing behind it](https://dafahaha.github.io/blog/textworld-bug-fix.html): root-cause writeup of merged PR #377. A greedy regex with DOTALL stitched two state blocks into one when a single line carried multiple commands.
 
 ---
 
