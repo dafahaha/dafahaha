@@ -31,6 +31,7 @@ Applying for PhD programs (Fall 2027) in Embodied AI / Reinforcement Learning / 
 
 | Project | PR | Contribution |
 |---------|-----|-------------|
+| [microsoft/TextWorld](https://github.com/microsoft/TextWorld/pull/377) | #377 | Fixed `env.step` crash on multi-command input (non-greedy score parsing + unit tests) |
 | [shmuma/ptan](https://github.com/shmuma/ptan/pull/57) | #57 | Fixed Gymnasium API compatibility in experience sources |
 | [Algorineko/AgenticArXiv-RL](https://github.com/Algorineko/AgenticArXiv-RL/pull/72) | #72 | Added MIT License, CONTRIBUTING, issue templates, CI |
 | [NVlabs/FluxVLA](https://github.com/NVlabs/FluxVLA/pull/122) | #122, #123 | Fixed typo and installation docs |
@@ -39,7 +40,6 @@ Applying for PhD programs (Fall 2027) in Embodied AI / Reinforcement Learning / 
 
 | Project | PR | Contribution |
 |---------|-----|-------------|
-| [microsoft/TextWorld](https://github.com/microsoft/TextWorld/pull/377) | #377 | Fixed `env.step` crash on multi-command input (non-greedy score parsing + tests) |
 | [vllm-project/vllm](https://github.com/vllm-project/vllm/pull/57400) | #57400 | Fixed `system_fingerprint=null` emitted under fingerprint-mode=none |
 | [pandas-dev/pandas](https://github.com/pandas-dev/pandas/pull/68968) | #68968 | Fixed `to_html` href escaping with render_links + escape |
 | [google/brax](https://github.com/google/brax/pull/676) | #676 | Fixed EpisodeWrapper metrics accumulation with action_repeat |
