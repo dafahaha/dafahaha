@@ -18,7 +18,7 @@ Applying for PhD programs (Fall 2027) in Embodied AI / Reinforcement Learning / 
 
 **Featured Work**
 
-**[TransitTruth](https://github.com/dafahaha/transit-truth)** — open-source auditing tool that verifies whether an AI API relay actually serves the advertised model, using statistical behavioral fingerprints (chi-square / KS tests, Bayesian updating). Includes a zero-install web demo and a **20-page technical report** validating same-family discrimination (gpt-4o vs gpt-4o-mini, TVD up to 0.90, 91.3% posterior identification). Complements single-token fingerprinting work by focusing on fine-grained same-family distinctions.
+**[TransitTruth](https://github.com/dafahaha/transit-truth)** — open-source auditing tool that verifies whether an AI API relay actually serves the advertised model, using statistical behavioral fingerprints (chi-square / KS tests, Bayesian updating). Includes a zero-install web demo and an extended technical report validating same-family discrimination (gpt-4o vs gpt-4o-mini, TVD up to 0.90, 91.3% in-distribution resubstitution posterior — self-consistency on the baseline's own reference, not held-out accuracy). Complements single-token fingerprinting work by focusing on fine-grained same-family distinctions.
 &nbsp;&nbsp;&nbsp;[Tech Report (PDF)](https://github.com/dafahaha/transit-truth/blob/main/docs/tech_report.pdf) · [Live Demo](https://dafahaha.github.io/transit-truth/)
 
 **[rl-deploy-bench](https://github.com/dafahaha/rl-deploy-bench)** — cross-platform RL deployment and benchmarking toolkit. Export SB3 policies to ONNX/TorchScript, build TensorRT engines with FP16/INT8 quantization, and benchmark latency/throughput/accuracy across GPU and CPU from one config-driven CLI with auto-generated HTML reports.
@@ -57,6 +57,7 @@ Plus documentation work in [UoA-CARES/cares_reinforcement_learning](https://gith
 ## Writing
 
 - [Fixing a bug in Microsoft TextWorld — one line of regex and the multi-command parsing behind it](https://dafahaha.github.io/blog/textworld-bug-fix.html): root-cause writeup of merged PR #377. A greedy regex with DOTALL stitched two state blocks into one when a single line carried multiple commands.
+- [When a clean install fails CI — a missing-dependency postmortem](https://dafahaha.github.io/blog/ci-missing-deps.html): numpy/scipy were used in code but never declared in requirements.txt / pyproject.toml, so a clean environment blew up with ModuleNotFoundError. Writeup of how the missing dependency was traced, reproduced in a fresh venv, and fixed by adding the pins.
 
 ---
 
