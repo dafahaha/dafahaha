@@ -65,7 +65,3 @@ Plus documentation work in [UoA-CARES/cares_reinforcement_learning](https://gith
 **RL / Robotics** — PyTorch · Stable-Baselines3 · Gymnasium · MuJoCo
 **Deployment** — ONNX · ONNX Runtime · TensorRT · TorchScript · INT8/FP16
 **Systems** — Python · C++ · Linux · Docker · Git · CI/CD · CUDA
-
----
-
-![Daizhi's GitHub stats](https://github-readme-stats.vercel.app/api?username=dafahaha&show_icons=true&hide_border=true&count_private=true)
