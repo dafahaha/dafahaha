@@ -24,7 +24,7 @@ Applying for PhD programs (Fall 2027) in Embodied AI / Reinforcement Learning / 
 **[embodied-offpolicy-study](https://github.com/dafahaha/embodied-offpolicy-study)** — a from-scratch Soft Actor-Critic implementation in PyTorch (no Stable-Baselines3), run as a **pre-registered three-arm controlled study** on Hopper-v4 (CPU, 120k env steps/run, 3 seeds/arm): Baseline (reward scale 1.0) vs RewardScaled (0.1) vs FixedAlpha (0.1, automatic temperature off, α fixed at 0.2). Mean return ± SD (final window 105k–120k, n=3/arm): Baseline 1085±698, RewardScaled 1118±623, FixedAlpha 1404±632. Welch p: Baseline–FixedAlpha 0.59, Baseline–RewardScaled 0.95, FixedAlpha–RewardScaled 0.61; one-way ANOVA F=0.22, p=0.81 — **no statistically distinguishable effect detected** (n=3; the t-intervals overlap heavily). The point of the study: at 60k the reward-scaled arm looked ~3× better, but extending to the pre-registered 120k budget and adding the fixed-temperature control arm overturned that apparent gain as early seed noise — an honest pre-registered null / overturned-positive. Raw per-episode CSVs are committed and the summary table is reproduced by `plot.py`.
 &nbsp;&nbsp;&nbsp;[Study write-up](https://github.com/dafahaha/embodied-offpolicy-study/blob/main/RESEARCH_RETRO.md) · [Pre-registration](https://github.com/dafahaha/embodied-offpolicy-study/blob/main/PRE_REGISTRATION.md)
 
-**[rl-deploy-bench](https://github.com/dafahaha/rl-deploy-bench)** — cross-platform RL deployment and benchmarking toolkit. Export SB3 policies to ONNX/TorchScript, build TensorRT engines with FP16/INT8 quantization, and benchmark latency/throughput/accuracy across GPU and CPU from one config-driven CLI with auto-generated HTML reports.
+**[rl-deploy-bench](https://github.com/dafahaha/rl-deploy-bench)** — cross-platform RL deployment and benchmarking toolkit. Export SB3 policies to ONNX/TorchScript, build TensorRT engines with FP16/INT8 quantization, and benchmark latency/throughput/accuracy across GPU and CPU from one config-driven CLI with auto-generated HTML reports. Jetson/edge is a target deployment path, not yet measured on device.
 
 ---
 
@@ -37,6 +37,7 @@ Applying for PhD programs (Fall 2027) in Embodied AI / Reinforcement Learning / 
 | [microsoft/TextWorld](https://github.com/microsoft/TextWorld/pull/377) | #377 | Fixed `env.step` crash on multi-command input (non-greedy score parsing + unit tests) |
 | [shmuma/ptan](https://github.com/shmuma/ptan/pull/57) | #57 | Fixed Gymnasium API compatibility in experience sources |
 | [Algorineko/AgenticArXiv-RL](https://github.com/Algorineko/AgenticArXiv-RL/pull/72) | #72 | Added MIT License, CONTRIBUTING, Code of Conduct, CI |
+| [learnsyslab/gym-pybullet-drones](https://github.com/learnsyslab/gym-pybullet-drones/pull/319) | #319 | Replaced print() error statements with module logging; converted exit() calls to raised exceptions |
 
 **In Review — Code Bug Fixes**
 
@@ -49,7 +50,6 @@ Applying for PhD programs (Fall 2027) in Embodied AI / Reinforcement Learning / 
 | [huggingface/datasets](https://github.com/huggingface/datasets/pull/8633) | #8633 | Accepted `pathlib.Path` in load/save_to_disk |
 | [huggingface/diffusers](https://github.com/huggingface/diffusers/pull/14796) | #14796 | Fixed undefined attribute in TangentialClassifierFreeGuidance |
 | [AI4Finance-Foundation/ElegantRL](https://github.com/AI4Finance-Foundation/ElegantRL/pull/488) | #488 | Fixed `argmax`→`max` in get_cumulative_rewards |
-| [learnsyslab/gym-pybullet-drones](https://github.com/learnsyslab/gym-pybullet-drones/pull/319) | #319 | Replaced print statements with standard logging |
 | [MichalBortkiewicz/JaxGCRL](https://github.com/MichalBortkiewicz/JaxGCRL/pull/65) | #65 | Fixed XML path resolution in arm manipulation envs |
 
 Plus documentation work in [UoA-CARES/cares_reinforcement_learning](https://github.com/UoA-CARES/cares_reinforcement_learning/pull/409) #409 and community/CI setup across several smaller RL projects.
