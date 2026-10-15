@@ -21,9 +21,6 @@ Applying for PhD programs (Fall 2027) in Embodied AI / Reinforcement Learning / 
 **[TransitTruth](https://github.com/dafahaha/transit-truth)** — open-source auditing tool that verifies whether an AI API relay actually serves the advertised model, using statistical behavioral fingerprints (chi-square / KS tests, Bayesian updating). Includes a zero-install web demo and an extended technical report validating same-family discrimination (gpt-4o vs gpt-4o-mini, TVD up to 0.90, 91.3% in-distribution resubstitution posterior — self-consistency on the baseline's own reference, not held-out accuracy). Complements single-token fingerprinting work by focusing on fine-grained same-family distinctions.
 &nbsp;&nbsp;&nbsp;[Tech Report (PDF)](https://github.com/dafahaha/transit-truth/blob/main/docs/tech_report.pdf) · [Live Demo](https://dafahaha.github.io/transit-truth/)
 
-**[embodied-offpolicy-study](https://github.com/dafahaha/embodied-offpolicy-study)** — a from-scratch Soft Actor-Critic implementation in PyTorch (no Stable-Baselines3), run as a **pre-registered three-arm controlled study** on Hopper-v4 (CPU, 120k env steps/run, 3 seeds/arm): Baseline (reward scale 1.0) vs RewardScaled (0.1) vs FixedAlpha (0.1, automatic temperature off, α fixed at 0.2). Mean return ± SD (final window 105k–120k, n=3/arm): Baseline 1085±698, RewardScaled 1118±623, FixedAlpha 1404±632. Welch p: Baseline–FixedAlpha 0.59, Baseline–RewardScaled 0.95, FixedAlpha–RewardScaled 0.61; one-way ANOVA F=0.22, p=0.81 — **no statistically distinguishable effect detected** (n=3; the t-intervals overlap heavily). The point of the study: at 60k the reward-scaled arm looked ~3× better, but extending to the pre-registered 120k budget and adding the fixed-temperature control arm overturned that apparent gain as early seed noise — an honest pre-registered null / overturned-positive. Raw per-episode CSVs are committed and the summary table is reproduced by `plot.py`.
-&nbsp;&nbsp;&nbsp;[Study write-up](https://github.com/dafahaha/embodied-offpolicy-study/blob/main/RESEARCH_RETRO.md) · [Pre-registration](https://github.com/dafahaha/embodied-offpolicy-study/blob/main/PRE_REGISTRATION.md)
-
 **[rl-deploy-bench](https://github.com/dafahaha/rl-deploy-bench)** — cross-platform RL deployment and benchmarking toolkit. Export SB3 policies to ONNX/TorchScript, build TensorRT engines with FP16/INT8 quantization, and benchmark latency/throughput/accuracy across GPU and CPU from one config-driven CLI with auto-generated HTML reports. Jetson/edge is a target deployment path, not yet measured on device.
 
 ---
@@ -38,6 +35,7 @@ Applying for PhD programs (Fall 2027) in Embodied AI / Reinforcement Learning / 
 | [shmuma/ptan](https://github.com/shmuma/ptan/pull/57) | #57 | Fixed Gymnasium API compatibility in experience sources |
 | [Algorineko/AgenticArXiv-RL](https://github.com/Algorineko/AgenticArXiv-RL/pull/72) | #72 | Added MIT License, CONTRIBUTING, Code of Conduct, CI |
 | [learnsyslab/gym-pybullet-drones](https://github.com/learnsyslab/gym-pybullet-drones/pull/319) | #319 | Replaced print() error statements with module logging; converted exit() calls to raised exceptions |
+| [Eclectic-Sheep/sheeprl](https://github.com/Eclectic-Sheep/sheeprl/pull/340) | #340 | Added CONTRIBUTING guide and Code of Conduct |
 
 **In Review — Code Bug Fixes**
 
@@ -51,6 +49,9 @@ Applying for PhD programs (Fall 2027) in Embodied AI / Reinforcement Learning / 
 | [huggingface/diffusers](https://github.com/huggingface/diffusers/pull/14796) | #14796 | Fixed undefined attribute in TangentialClassifierFreeGuidance |
 | [AI4Finance-Foundation/ElegantRL](https://github.com/AI4Finance-Foundation/ElegantRL/pull/488) | #488 | Fixed `argmax`→`max` in get_cumulative_rewards |
 | [MichalBortkiewicz/JaxGCRL](https://github.com/MichalBortkiewicz/JaxGCRL/pull/65) | #65 | Fixed XML path resolution in arm manipulation envs |
+| [thu-ml/tianshou](https://github.com/thu-ml/tianshou/pull/1315) | #1315 | Fixed pickled policy restore under PyTorch 2.6 `weights_only` default |
+| [ContinualAI/avalanche](https://github.com/ContinualAI/avalanche/pull/1701) | #1701 | Fixed MASPlugin raising on zero loss (falsy check) |
+| [uoe-agents/epymarl](https://github.com/uoe-agents/epymarl/pull/92) | #92 | Fixed registration of multi-digit versioned PettingZoo envs |
 
 Plus documentation work in [UoA-CARES/cares_reinforcement_learning](https://github.com/UoA-CARES/cares_reinforcement_learning/pull/409) #409 and community/CI setup across several smaller RL projects.
 
@@ -59,15 +60,6 @@ Plus documentation work in [UoA-CARES/cares_reinforcement_learning](https://gith
 ## Writing
 
 - [Fixing a bug in Microsoft TextWorld — one line of regex and the multi-command parsing behind it](https://dafahaha.github.io/blog/textworld-bug-fix.html): root-cause writeup of merged PR #377. A greedy regex with DOTALL stitched two state blocks into one when a single line carried multiple commands.
-- [When a clean install fails CI — a missing-dependency postmortem](https://dafahaha.github.io/blog/ci-missing-deps.html): numpy/scipy were used in code but never declared in requirements.txt / pyproject.toml, so a clean environment blew up with ModuleNotFoundError. Writeup of how the missing dependency was traced, reproduced in a fresh venv, and fixed by adding the pins.
-
----
-
-
-## Publications & Preprints
-
-- Behavioral Fingerprinting of LLM API Relays — detecting model substitution on AI API relays (double-blind workshop paper). *In preparation.*
-- TransitTruth: Extended Technical Report — behavioral probing, chi-square/KS & Bayesian self-consistency, threats to validity (2026). [PDF](https://github.com/dafahaha/transit-truth/blob/main/docs/tech_report.pdf).
 
 ---
 
@@ -76,3 +68,7 @@ Plus documentation work in [UoA-CARES/cares_reinforcement_learning](https://gith
 **RL / Robotics** — PyTorch · Stable-Baselines3 · Gymnasium · MuJoCo
 **Deployment** — ONNX · ONNX Runtime · TensorRT · TorchScript · INT8/FP16
 **Systems** — Python · C++ · Linux · Docker · Git · CI/CD · CUDA
+
+---
+
+![Daizhi's GitHub stats](https://github-readme-stats.vercel.app/api?username=dafahaha&show_icons=true&hide_border=true&count_private=true)
