@@ -1,6 +1,8 @@
 ### Hi, I'm Daizhi Liao
 
-Third-year undergraduate in Network Engineering at Guangzhou University. I build tools that audit deployed AI systems, run preregistered empirical studies in RL, and contribute a small number of fixes upstream in depth — rather than scattering patches across many repos.
+Third-year undergraduate in Network Engineering at Guangzhou University. I build tools that audit deployed AI systems and run preregistered empirical studies in RL.
+
+My contribution history starts with an early exploratory phase — small docs and fixes spread across many RL/ML repos. Since then I've deliberately narrowed to a few in-depth upstream fixes (below) and to my own research artifacts; the broad early PRs are left as-is rather than hidden.
 
 Applying for PhD programs (Fall 2027) in Embodied AI / Reinforcement Learning / Robotics.
 
@@ -15,7 +17,7 @@ Applying for PhD programs (Fall 2027) in Embodied AI / Reinforcement Learning / 
 
 **[wm-audit](https://github.com/dafahaha/wm-audit)** — preregistered single-machine CPU audit suite that disentangles world-model *perceptual fidelity* (next-frame MSE / SSIM / NLL, plus fixed-filter stand-ins for LPIPS / rollout FVD — deterministic random-conv filter banks, not learned VGG/AlexNet backbones) from *control utility* (whether a planner can actually solve the task). A reduced pilot on one env (pixel_nav, 3 seeds × 3 capacities, 12k steps) found: pixel fidelity weakly predicts closed-loop return (H1 supported, |ρ|=0.32<0.4); control-relevant diagnostics did not (H2 not supported, ρ=0.26<0.6); INT8 compression did not degrade calibration faster than raw pixel fidelity (H3 not supported, n_pairs=9). This is a CPU reduced pilot, not the locked 200k-step × 5-seed × 2-env main run.
 
-**[embodied-offpolicy-study](https://github.com/dafahaha/embodied-offpolicy-study)** — a Soft Actor-Critic implementation written from scratch in PyTorch (no Stable-Baselines3), run as a preregistered three-arm controlled study on Hopper-v4 (CPU, 120k env steps, 3 seeds/arm): Baseline (reward scale 1.0) vs RewardScaled (0.1) vs FixedAlpha (α fixed at 0.2). Welch p: Baseline–FixedAlpha 0.59, Baseline–RewardScaled 0.95; ANOVA F=0.22, p=0.81 — no statistically distinguishable effect detected (n=3). At 60k the reward-scaled arm looked ~3× better; extending to the preregistered 120k budget and adding the fixed-temperature control arm overturned that apparent gain as early seed noise.
+**[embodied-offpolicy-study](https://github.com/dafahaha/embodied-offpolicy-study)** — a Soft Actor-Critic implementation written from scratch in PyTorch (no Stable-Baselines3), run as a preregistered three-arm controlled study on Hopper-v4 (CPU, 120k env steps, 3 seeds/arm): Baseline (reward scale 1.0) vs RewardScaled (0.1) vs FixedAlpha (automatic temperature off, α fixed at 0.2). Mean return ± SD (final window 105k–120k, n=3/arm): Baseline 1085±698, RewardScaled 1118±623, FixedAlpha 1404±632. Welch p: Baseline–FixedAlpha 0.59, Baseline–RewardScaled 0.95, FixedAlpha–RewardScaled 0.61; ANOVA F=0.22, p=0.81 — no statistically distinguishable effect detected (n=3). At 60k the reward-scaled arm looked ~3× better; extending to the preregistered 120k budget and adding the fixed-temperature control arm overturned that apparent gain as early seed noise.
 
 **[rl-deploy-bench](https://github.com/dafahaha/rl-deploy-bench)** — cross-platform RL deployment and benchmarking toolkit. Export SB3 policies to ONNX/TorchScript, build TensorRT engines with FP16/INT8 quantization, and benchmark latency/throughput/accuracy across GPU and CPU from one config-driven CLI with auto-generated HTML reports. Jetson/edge is a target deployment path, not yet measured on device.
 
@@ -23,14 +25,21 @@ Applying for PhD programs (Fall 2027) in Embodied AI / Reinforcement Learning / 
 
 ## Open Source Contributions
 
-**Merged**
+**Merged — code fixes (3)**
 
 | Project | PR | Contribution |
 |---------|-----|-------------|
 | [microsoft/TextWorld](https://github.com/microsoft/TextWorld/pull/377) | #377 | Fixed `env.step` crash on multi-command input (non-greedy score parsing + unit tests) |
-| [shmuma/ptan](https://github.com/shmuma/ptan/pull/57) | #57 | Fixed Gymnasium API compatibility in experience sources |
+| [shmuma/ptan](https://github.com/shmuma/ptan/pull/57) | #57 | Fixed Gymnasium 5-tuple API compatibility in experience sources |
 | [learnsyslab/gym-pybullet-drones](https://github.com/learnsyslab/gym-pybullet-drones/pull/319) | #319 | Replaced print() error statements with module logging; converted exit() calls to raised exceptions |
-| [Eclectic-Sheep/sheeprl](https://github.com/Eclectic-Sheep/sheeprl/pull/340) | #340 | Added CONTRIBUTING guide and Code of Conduct |
+
+**Merged — community & documentation (5, not code fixes)**
+
+- [Eclectic-Sheep/sheeprl #340](https://github.com/Eclectic-Sheep/sheeprl/pull/340) — CONTRIBUTING guide and Code of Conduct.
+- [Algorineko/AgenticArXiv-RL #72](https://github.com/Algorineko/AgenticArXiv-RL/pull/72) — MIT LICENSE, CONTRIBUTING, Code of Conduct, and CI workflow.
+- [FluxVLA #122](https://github.com/FluxVLA/FluxVLA/pull/122) — typo rename `bloat16` → `bf16` in the BFloat16 support check.
+- [FluxVLA #123](https://github.com/FluxVLA/FluxVLA/pull/123) — community docs: CONTRIBUTING, Code of Conduct, CHANGELOG, issue templates.
+- [scadastrangelove/awesome-ai-security-tools #165](https://github.com/scadastrangelove/awesome-ai-security-tools/pull/165) — added TransitTruth to the WATCHLIST (merged 2026-10-21).
 
 **Under review (not yet merged) — selected code PRs in upstream RL/ML infrastructure**
 
@@ -47,8 +56,9 @@ Applying for PhD programs (Fall 2027) in Embodied AI / Reinforcement Learning / 
 | [Farama-Foundation/PettingZoo](https://github.com/Farama-Foundation/PettingZoo/pull/1465) | #1465 | Fixed agent selector reinit in tictactoe reset |
 | [MichalBortkiewicz/JaxGCRL](https://github.com/MichalBortkiewicz/JaxGCRL/pull/65) | #65 | Fixed XML path resolution in arm manipulation envs |
 | [pandas-dev/pandas](https://github.com/pandas-dev/pandas/pull/68968) | #68968 | Fixed `to_html` href escaping with render_links + escape |
+| [RLE-Bench/RLE-Bench](https://github.com/RLE-Bench/RLE-Bench/pull/9) | #9 | Recorded per-trial status/reason/timing in summary.json; resolved embedded final-step reward from the step directory |
 
-Smaller docs / community-health PRs (LICENSE, CONTRIBUTING, Code of Conduct, CI setup) across a number of smaller RL/ML projects, plus a typo fix in FluxVLA.
+Other early exploratory PRs across smaller RL/ML projects remain open or unanswered — part of the broad phase noted above, not deep work.
 
 ---
 
