@@ -4,7 +4,7 @@ Third-year undergraduate in Network Engineering at Guangzhou University. I build
 
 My contribution history starts with an early exploratory phase — small docs and fixes spread across many RL/ML repos. Since then I've deliberately narrowed to a few in-depth upstream fixes (below) and to my own research artifacts; the broad early PRs are left as-is rather than hidden.
 
-Applying for PhD programs (Fall 2027) in Embodied AI / Reinforcement Learning / Robotics.
+Applying for Fall 2027 PhD entry (applications in Fall 2026) in Embodied AI / Reinforcement Learning / Robotics.
 
 [Academic Homepage](https://dafahaha.github.io) | [Blog](https://dafahaha.github.io/blog/) | [CV](https://dafahaha.github.io/CV.pdf) | [ldz@e.gzhu.edu.cn](mailto:ldz@e.gzhu.edu.cn)
 
@@ -12,12 +12,12 @@ Applying for PhD programs (Fall 2027) in Embodied AI / Reinforcement Learning / 
 
 ## Featured Work
 
-**[TransitTruth](https://github.com/dafahaha/transit-truth)** — open-source auditing tool that verifies whether an AI API relay actually serves the advertised model, using statistical behavioral fingerprints (chi-square / KS tests, Bayesian updating). Includes a zero-install web demo and an extended technical report validating same-family discrimination (gpt-4o vs gpt-4o-mini, TVD up to 0.90, 91.3% in-distribution resubstitution posterior — self-consistency on the baseline's own reference, not held-out accuracy). Complements single-token fingerprinting work by focusing on fine-grained same-family distinctions.
+**[TransitTruth](https://github.com/dafahaha/transit-truth)** — open-source auditing tool that verifies whether an AI API relay actually serves the advertised model, using statistical behavioral fingerprints (chi-square / KS tests, Bayesian updating). A guided offline demo walks through the check with bundled seed data; the real audit runs locally. The technical report reports the animal-probe distribution distance gpt-4o vs gpt-4o-mini (TVD up to 0.90) and, separately, the combined pipeline's in-distribution resubstitution posterior (91.3% on the baseline's own reference — self-consistency, not held-out accuracy). Complements single-token fingerprinting work by focusing on fine-grained same-family distinctions.
 &nbsp;&nbsp;&nbsp;[Tech Report (PDF)](https://github.com/dafahaha/transit-truth/blob/main/docs/tech_report.pdf) · [Live Demo](https://dafahaha.github.io/transit-truth/)
 
 **[wm-audit](https://github.com/dafahaha/wm-audit)** — preregistered single-machine CPU audit suite that disentangles world-model *perceptual fidelity* (next-frame MSE / SSIM / NLL, plus fixed-filter stand-ins for LPIPS / rollout FVD — deterministic random-conv filter banks, not learned VGG/AlexNet backbones) from *control utility* (whether a planner can actually solve the task). A reduced pilot on one env (pixel_nav, 3 seeds × 3 capacities, 12k steps) found: pixel fidelity weakly predicts closed-loop return (H1 supported, |ρ|=0.32<0.4); control-relevant diagnostics did not (H2 not supported, ρ=0.26<0.6); INT8 compression did not degrade calibration faster than raw pixel fidelity (H3 not supported, n_pairs=9). This is a CPU reduced pilot, not the locked 200k-step × 5-seed × 2-env main run.
 
-**[embodied-offpolicy-study](https://github.com/dafahaha/embodied-offpolicy-study)** — a Soft Actor-Critic implementation written from scratch in PyTorch (no Stable-Baselines3), run as a preregistered three-arm controlled study on Hopper-v4 (CPU, 120k env steps, 3 seeds/arm): Baseline (reward scale 1.0) vs RewardScaled (0.1) vs FixedAlpha (automatic temperature off, α fixed at 0.2). Mean return ± SD (final window 105k–120k, n=3/arm): Baseline 1085±698, RewardScaled 1118±623, FixedAlpha 1404±632. Welch p: Baseline–FixedAlpha 0.59, Baseline–RewardScaled 0.95, FixedAlpha–RewardScaled 0.61; ANOVA F=0.22, p=0.81 — no statistically distinguishable effect detected (n=3). At 60k the reward-scaled arm looked ~3× better; extending to the preregistered 120k budget and adding the fixed-temperature control arm overturned that apparent gain as early seed noise.
+**[embodied-offpolicy-study](https://github.com/dafahaha/embodied-offpolicy-study)** — a Soft Actor-Critic implementation written from scratch in PyTorch (no Stable-Baselines3), run as a preregistered two-arm controlled study with a logged third-arm (FixedAlpha) amendment on Hopper-v4 (CPU, 120k env steps, 3 seeds/arm): Baseline (reward scale 1.0) vs RewardScaled (0.1) vs FixedAlpha (automatic temperature off, scale 0.1, α fixed at 0.2). Mean return ± SD (final window 105k–120k, n=3/arm): Baseline 1085±698, RewardScaled 1118±623, FixedAlpha 1404±632. Welch p: Baseline–FixedAlpha 0.59, Baseline–RewardScaled 0.95, FixedAlpha–RewardScaled 0.61; ANOVA F=0.22, p=0.81 — no statistically distinguishable effect detected (n=3). At 60k the reward-scaled arm looked ~3× better; extending to the preregistered 120k budget and adding the fixed-temperature control arm overturned that apparent gain as early seed noise.
 
 **[rl-deploy-bench](https://github.com/dafahaha/rl-deploy-bench)** — cross-platform RL deployment and benchmarking toolkit. Export SB3 policies to ONNX/TorchScript, build TensorRT engines with FP16/INT8 quantization, and benchmark latency/throughput/accuracy across GPU and CPU from one config-driven CLI with auto-generated HTML reports. Jetson/edge is a target deployment path, not yet measured on device.
 
@@ -31,7 +31,7 @@ Applying for PhD programs (Fall 2027) in Embodied AI / Reinforcement Learning / 
 |---------|-----|-------------|
 | [microsoft/TextWorld](https://github.com/microsoft/TextWorld/pull/377) | #377 | Fixed `env.step` crash on multi-command input (non-greedy score parsing + unit tests) |
 | [shmuma/ptan](https://github.com/shmuma/ptan/pull/57) | #57 | Fixed Gymnasium 5-tuple API compatibility in experience sources |
-| [learnsyslab/gym-pybullet-drones](https://github.com/learnsyslab/gym-pybullet-drones/pull/319) | #319 | Replaced print() error statements with module logging; converted exit() calls to raised exceptions |
+| [learnsyslab/gym-pybullet-drones](https://github.com/learnsyslab/gym-pybullet-drones/pull/319) | #319 | Converted print()+exit() error paths to raised exceptions across 8 files |
 
 **Merged — community & documentation (5, not code fixes)**
 
@@ -77,4 +77,4 @@ Other early exploratory PRs across smaller RL/ML projects remain open or unanswe
 
 ---
 
-![Daizhi's GitHub stats](https://github-readme-stats.vercel.app/api?username=dafahaha&show_icons=true&hide_border=true&count_private=true)
+![Daizhi's GitHub stats](https://github-readme-stats.vercel.app/api?username=dafahaha&show_icons=true&hide_border=true)
