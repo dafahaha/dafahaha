@@ -62,6 +62,20 @@ Other early exploratory PRs across smaller RL/ML projects remain open or unanswe
 
 ---
 
+## Agent Skills & Tools
+
+Small, focused, offline tools that keep RL reporting and relay setup honest. They are zero-dependency local utilities (not services), each with its own test suite.
+
+- [seedlot](https://github.com/dafahaha/seedlot) — aggregate per-seed RL logs into mean ± std, IQR and 95% CI; blocks single-seed superiority claims.
+- [policy-parity](https://github.com/dafahaha/policy-parity) — compare FP32 vs quantized/exported action logs (MAE, cosine, tolerance) before deployment.
+- [claim-boundary](https://github.com/dafahaha/claim-boundary) — check a draft's wording against the scope actually measured.
+- [relay-preflight](https://github.com/dafahaha/relay-preflight) — offline hygiene scan for relay configs (inline keys, Bearer, plaintext http).
+- [dsh-model-probe](https://github.com/dafahaha/dsh-model-probe) — a DSH plugin that runs the local model-authenticity check from a settings page.
+
+Research notes and figures from the offline-policy study: [GitHub Pages notebook](https://dafahaha.github.io/embodied-offpolicy-study/).
+
+---
+
 ## Writing
 
 - [Fixing a bug in Microsoft TextWorld — one line of regex and the multi-command parsing behind it](https://dafahaha.github.io/blog/textworld-bug-fix.html): root-cause writeup of merged PR #377. A greedy regex with DOTALL stitched two state blocks into one when a single line carried multiple commands.
