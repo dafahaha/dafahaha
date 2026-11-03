@@ -1,6 +1,6 @@
 ### Hi, I'm Daizhi Liao
 
-Third-year undergraduate in Network Engineering at Guangzhou University. I build tools that audit deployed AI systems and run preregistered empirical studies in RL.
+Fourth-year undergraduate (senior) in Network Engineering at Guangzhou University. I build tools that audit deployed AI systems and run preregistered empirical studies in RL.
 
 My contribution history starts with an early exploratory phase — small docs and fixes spread across many RL/ML repos. Since then I've deliberately narrowed to a few in-depth upstream fixes (below) and to my own research artifacts; the broad early PRs are left as-is rather than hidden.
 
@@ -25,13 +25,14 @@ Applying for Fall 2027 PhD entry (applications in Fall 2026) in Embodied AI / Re
 
 ## Open Source Contributions
 
-**Merged — code fixes (3)**
+**Merged — code fixes (4)**
 
 | Project | PR | Contribution |
 |---------|-----|-------------|
 | [microsoft/TextWorld](https://github.com/microsoft/TextWorld/pull/377) | #377 | Fixed `env.step` crash on multi-command input (non-greedy score parsing + unit tests) |
 | [shmuma/ptan](https://github.com/shmuma/ptan/pull/57) | #57 | Fixed Gymnasium 5-tuple API compatibility in experience sources |
 | [learnsyslab/gym-pybullet-drones](https://github.com/learnsyslab/gym-pybullet-drones/pull/319) | #319 | Converted print()+exit() error paths to raised exceptions across 8 files |
+| [MichalBortkiewicz/JaxGCRL](https://github.com/MichalBortkiewicz/JaxGCRL/pull/65) | #65 | Fixed XML path resolution across all arm manipulation environments |
 
 **Merged — community & documentation (5, not code fixes)**
 
@@ -54,7 +55,6 @@ Applying for Fall 2027 PhD entry (applications in Fall 2026) in Embodied AI / Re
 | [google/brax](https://github.com/google/brax/pull/676) | #676 | Fixed EpisodeWrapper metrics accumulation with action_repeat |
 | [AI4Finance-Foundation/ElegantRL](https://github.com/AI4Finance-Foundation/ElegantRL/pull/488) | #488 | Fixed `argmax`→`max` in get_cumulative_rewards |
 | [Farama-Foundation/PettingZoo](https://github.com/Farama-Foundation/PettingZoo/pull/1465) | #1465 | Fixed agent selector reinit in tictactoe reset |
-| [MichalBortkiewicz/JaxGCRL](https://github.com/MichalBortkiewicz/JaxGCRL/pull/65) | #65 | Fixed XML path resolution in arm manipulation envs |
 | [pandas-dev/pandas](https://github.com/pandas-dev/pandas/pull/68968) | #68968 | Fixed `to_html` href escaping with render_links + escape |
 | [RLE-Bench/RLE-Bench](https://github.com/RLE-Bench/RLE-Bench/pull/9) | #9 | Recorded per-trial status/reason/timing in summary.json; resolved embedded final-step reward from the step directory |
 
