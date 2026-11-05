@@ -25,7 +25,7 @@ Applying for Fall 2027 PhD entry (applications in Fall 2026) in Embodied AI / Re
 
 ## Open Source Contributions
 
-**Merged — code fixes (4)**
+**Merged — code fixes (5)**
 
 | Project | PR | Contribution |
 |---------|-----|-------------|
@@ -33,6 +33,7 @@ Applying for Fall 2027 PhD entry (applications in Fall 2026) in Embodied AI / Re
 | [shmuma/ptan](https://github.com/shmuma/ptan/pull/57) | #57 | Fixed Gymnasium 5-tuple API compatibility in experience sources |
 | [learnsyslab/gym-pybullet-drones](https://github.com/learnsyslab/gym-pybullet-drones/pull/319) | #319 | Converted print()+exit() error paths to raised exceptions across 8 files |
 | [MichalBortkiewicz/JaxGCRL](https://github.com/MichalBortkiewicz/JaxGCRL/pull/65) | #65 | Fixed XML path resolution across all arm manipulation environments |
+| [RLE-Bench/RLE-Bench](https://github.com/RLE-Bench/RLE-Bench/pull/9) | #9 | Recorded per-trial status/failure reason/timing in `summary.json`; fixed embedded final-step reward resolution |
 
 **Merged — community & documentation (5, not code fixes)**
 
@@ -56,7 +57,6 @@ Applying for Fall 2027 PhD entry (applications in Fall 2026) in Embodied AI / Re
 | [AI4Finance-Foundation/ElegantRL](https://github.com/AI4Finance-Foundation/ElegantRL/pull/488) | #488 | Fixed `argmax`→`max` in get_cumulative_rewards |
 | [Farama-Foundation/PettingZoo](https://github.com/Farama-Foundation/PettingZoo/pull/1465) | #1465 | Fixed agent selector reinit in tictactoe reset |
 | [pandas-dev/pandas](https://github.com/pandas-dev/pandas/pull/68968) | #68968 | Fixed `to_html` href escaping with render_links + escape |
-| [RLE-Bench/RLE-Bench](https://github.com/RLE-Bench/RLE-Bench/pull/9) | #9 | Recorded per-trial status/reason/timing in summary.json; resolved embedded final-step reward from the step directory |
 
 Other early exploratory PRs across smaller RL/ML projects remain open or unanswered — part of the broad phase noted above, not deep work.
 
