@@ -4,7 +4,7 @@ Fourth-year undergraduate (senior) in Network Engineering at Guangzhou Universit
 
 My contribution history starts with an early exploratory phase — small docs and fixes spread across many RL/ML repos. Since then I've deliberately narrowed to a few in-depth upstream fixes (below) and to my own research artifacts; the broad early PRs are left as-is rather than hidden.
 
-Applying for Fall 2027 PhD entry (applications in Fall 2026) in Embodied AI / Reinforcement Learning / Robotics.
+Applying for Fall 2027 PhD entry (applications due Dec 2026 – Jan 2027) in Embodied AI / Reinforcement Learning / Robotics.
 
 [Academic Homepage](https://dafahaha.github.io) | [Blog](https://dafahaha.github.io/blog/) | [CV](https://dafahaha.github.io/CV.pdf) | [ldz@e.gzhu.edu.cn](mailto:ldz@e.gzhu.edu.cn)
 
@@ -86,8 +86,8 @@ Research notes and figures from the offline-policy study: [GitHub Pages notebook
 ## Tech Stack
 
 **RL / Robotics** — PyTorch · Stable-Baselines3 · Gymnasium · MuJoCo
-**Deployment** — ONNX · ONNX Runtime · TensorRT · TorchScript · INT8/FP16
-**Systems** — Python · C++ · Linux · Docker · Git · CI/CD · CUDA
+**Deployment** — ONNX · ONNX Runtime · TorchScript · INT8/FP16; TensorRT engine-builder written but not yet wired into the benchmark harness
+**Systems** — Python · C++ · Linux · Docker · Git · CI/CD; CUDA (learning — deployment code written, no GPU-measured results yet)
 
 ---
 
