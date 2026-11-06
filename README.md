@@ -72,7 +72,7 @@ Small, focused, offline tools that keep RL reporting and relay setup honest. The
 - [relay-preflight](https://github.com/dafahaha/relay-preflight) — offline hygiene scan for relay configs (inline keys, Bearer, plaintext http).
 - [dsh-model-probe](https://github.com/dafahaha/dsh-model-probe) — a DSH plugin that runs the local model-authenticity check from a settings page.
 
-Research notes and figures from the offline-policy study: [GitHub Pages notebook](https://dafahaha.github.io/embodied-offpolicy-study/).
+Research notes and figures from the off-policy study: [GitHub Pages notebook](https://dafahaha.github.io/embodied-offpolicy-study/).
 
 ---
 
