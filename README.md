@@ -33,7 +33,7 @@ Applying for Fall 2027 PhD entry (applications due Dec 2026 – Jan 2027) in Emb
 | [shmuma/ptan](https://github.com/shmuma/ptan/pull/57) | #57 | Fixed Gymnasium 5-tuple API compatibility in experience sources |
 | [learnsyslab/gym-pybullet-drones](https://github.com/learnsyslab/gym-pybullet-drones/pull/319) | #319 | Converted print()+exit() error paths to raised exceptions across 8 files |
 | [MichalBortkiewicz/JaxGCRL](https://github.com/MichalBortkiewicz/JaxGCRL/pull/65) | #65 | Fixed XML path resolution across all arm manipulation environments |
-| [RLE-Bench/RLE-Bench](https://github.com/RLE-Bench/RLE-Bench/pull/9) | #9 | Recorded per-trial status/failure reason/timing in `summary.json`; fixed embedded final-step reward resolution |
+| [RLE-Bench/RLE-Bench](https://github.com/RLE-Bench/RLE-Bench/pull/9) | #9 | Recorded per-trial status/failure reason/timing in `summary.json`; fixed embedded final-step reward resolution. The maintainer closed the issue this addressed (#8) as completed, citing "fixed by #9" |
 
 **Merged — community & documentation (5, not code fixes)**
 
