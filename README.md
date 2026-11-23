@@ -55,7 +55,6 @@ Applying for Fall 2027 PhD entry (applications due Dec 2026 – Jan 2027) in Emb
 | [huggingface/diffusers](https://github.com/huggingface/diffusers/pull/14796) | #14796 | Fixed undefined attribute in TangentialClassifierFreeGuidance |
 | [google/brax](https://github.com/google/brax/pull/676) | #676 | Fixed EpisodeWrapper metrics accumulation with action_repeat |
 | [AI4Finance-Foundation/ElegantRL](https://github.com/AI4Finance-Foundation/ElegantRL/pull/488) | #488 | Fixed `argmax`→`max` in get_cumulative_rewards |
-| [Farama-Foundation/PettingZoo](https://github.com/Farama-Foundation/PettingZoo/pull/1465) | #1465 | Fixed agent selector reinit in tictactoe reset |
 | [pandas-dev/pandas](https://github.com/pandas-dev/pandas/pull/68968) | #68968 | Fixed `to_html` href escaping with render_links + escape |
 
 Other early exploratory PRs across smaller RL/ML projects remain open or unanswered — part of the broad phase noted above, not deep work.
